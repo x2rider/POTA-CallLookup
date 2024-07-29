@@ -1,6 +1,7 @@
 # POTA-Call Lookup plugin
 ## Paul - KA5PMV
 When run with the Parks On The Air (POTA) browser extension (https://dwestbrook.net/projects/potaplus/), these scripts will enable looking up callsigns from various loggers when clicking the QSY button.\
+
 **Known bugs:** For unknown reasons, the browser stops making external calls. You can fix this by refreshing the pota spot page, it'll work again.\
 **Note:** If you get an error that the port is in use, you may have to change the port number to something else.  For this example, the port number is 8075.  Your installation could use something different.
 
