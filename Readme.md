@@ -1,7 +1,7 @@
 # POTA-Call Lookup plugin
 ## Paul - KA5PMV
 When run with the POTA extension, these scripts will enable looking up callsigns from various loggers when clicking the QSY button.
-Known bugs: For unknown reasons, at some point it stops working, but if you refresh your browser, it'll work again.
+Known bugs: For unknown reasons, the browser stops making external calls. You can fix this by refreshing the pota spot page, it'll work again.
 
 Usage:
 To run the proxy that handles communication between your browser and your logging software, you can either:
@@ -27,7 +27,7 @@ First, place the following function at the end of the foreground.js file of the 
 	}
 ```
 
-This is a bit hard to explain where it goes.
+This is a bit hard to explain where it goes.\
 Place the following line at the end of the QSY function.
 ``` setCall(scan_call, OPTIONS.loggingConfig.method); ```
 
@@ -37,9 +37,9 @@ if( OPTIONS.enableQsy &&
 	    ! objs.freq.innerHTML.match(/QSY_BTN/) ){
 ```
 
-In the current source file as I have it, it goes just before the 'fetch' call which as of this version is around line 2502
-==> Look for this line between the quotes. "_fetch( url, {});//{ mode: 'no-cors' } );"
-Place the setCall line just before it.
+In the current source file as I have it, the new line of code above goes just before the 'fetch' call which as of this version is around line 2502\
+==> Look for this line between the quotes. ``` _fetch( url, {});//{ mode: 'no-cors' } ); ``` \
+Place the setCall line just before it.\
 In the end, it should look something like this...
 
 ```
