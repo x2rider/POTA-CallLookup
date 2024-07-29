@@ -1,5 +1,5 @@
-// POTA-Call Lookup plugin
-// Paul - KA5PMV
+#POTA-Call Lookup plugin
+## Paul - KA5PMV
 // When run with the POTA extension, these scripts will enable looking up callsigns from various loggers when clicking the QSY button.
 // Known bugs: For unknown reasons, at some point it stops working, but if you refresh your browser, it'll work again.
 
@@ -11,6 +11,7 @@
 // once started, you can minimize it
 
 // First, place the following function at the end of the foreground.js file of the potaplus extension folder.
+```
 	function setCall(callSign, method) {
 		console.log("setCall('" + callSign + "', '" + method + "')");
 		var url = '';
@@ -24,6 +25,7 @@
 			}
 		}
 	}
+```
 
 // This is a bit hard to explain where it goes.
 //Place the following line at the end of the QSY function.
@@ -36,10 +38,12 @@ setCall(scan_call, OPTIONS.loggingConfig.method);
 // ==> Look for this line between the quotes. "_fetch( url, {});//{ mode: 'no-cors' } );"
 // Place the setCall line just before it.
 // In the end, it should look something like this...
+```
 	//console.log("URL:", url);
 		setCall(scan_call, OPTIONS.loggingConfig.method);
 
 		_fetch( url, {});//{ mode: 'no-cors' } );
 	});
 	if( LISTMODE ){
+```
 ...
