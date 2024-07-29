@@ -29,7 +29,7 @@ First, place the following function at the end of the foreground.js file of the 
 
 This is a bit hard to explain where it goes.
 Place the following line at the end of the QSY function.
-setCall(scan_call, OPTIONS.loggingConfig.method);
+``` setCall(scan_call, OPTIONS.loggingConfig.method); ```
 
 The QSY function starts with these lines...
 ```
