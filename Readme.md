@@ -28,7 +28,7 @@ First, place the following function at the end of the foreground.js file of the 
 	}
 ```
 
-This is a bit hard to explain where it goes.\
+This is a bit hard to explain where it goes, but the one line of code below needs to be added to the QSY function so it's called whenever the QSY button is clicked.\
 Place the following line at the end of the QSY function.
 ``` setCall(scan_call, OPTIONS.loggingConfig.method); ```
 
