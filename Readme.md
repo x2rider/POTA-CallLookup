@@ -40,7 +40,7 @@ if( OPTIONS.enableQsy &&
 ```
 
 In the current source file as I have it, the new line of code above goes just before the 'fetch' call which as of this version is around line 2502\
-==> Look for this line between the quotes. ``` _fetch( url, {});//{ mode: 'no-cors' } ); ``` \
+==> Look for this line: ``` _fetch( url, {});//{ mode: 'no-cors' } ); ``` \
 Place the setCall line just before it.\
 In the end, it should look something like this...
 
