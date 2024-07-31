@@ -53,13 +53,13 @@ This is a bit hard to explain where it goes, but the one line of code below need
 Place the following line at the end of the QSY function.
 ``` setCall(scan_call, OPTIONS.loggingConfig.method); ```
 
-The QSY function starts with these lines...
+The QSY function in the plugin starts with these lines...
 ```
 if( OPTIONS.enableQsy &&
 	    ! objs.freq.innerHTML.match(/QSY_BTN/) ){
 ```
 
-In the current source file as I have it, the new line of code above goes just before the 'fetch' call which as of this version is around line 2502\
+In the current source file as I have it, the new line of code above goes just before the '_fetch' call which as of this version is around line 2502\
 ==> Look for this line: ``` _fetch( url, {});//{ mode: 'no-cors' } ); ``` \
 Place the setCall line just before it.\
 In the end, it should look something like this...

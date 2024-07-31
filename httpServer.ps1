@@ -34,5 +34,6 @@ try {
 }
 finally {
     Write-Host "$(Get-Date) Stopping"
-    $listener.Stop() 
+    $listener.Stop()
+    $Socket.Close()
 }
