@@ -11,7 +11,7 @@ $tcpStream = $Socket.GetStream()
 $writer = New-Object System.IO.StreamWriter($tcpStream)
 $writer.AutoFlush = $true
 $writer.WriteLine($Message) | Out-Null
-Write-Host "Message Sent: '$Message'"
+#Write-Host "Message Sent: '$Message'"
 
 $writer.Close()
 $Socket.Close()
