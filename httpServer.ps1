@@ -20,9 +20,13 @@ try {
                 "log4om" {
                     ./SendCallToLog4OM.ps1 $callSign
                    }
-                "aclog"{
+                "aclog" {
                     ./SendCallToAclog.ps1 $callSign
-                   }
+                    }
+                #"commander"{
+                #    ./SendCallToDxCommander $callSign
+                #   }
+
                 Default { Write-Host "Unknown method.  Options are: log4om or aclog"}
             }
         }

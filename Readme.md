@@ -2,8 +2,28 @@
 ## Paul - KA5PMV
 When run with the Parks On The Air (POTA) browser extension (https://dwestbrook.net/projects/potaplus/), these scripts will enable looking up callsigns from various loggers when clicking the QSY button.\
 
+**System Prep**
+After unzipping the files, right click on each .ps1 file, go to properties, then in the General tab, look at the bottom and see if there is a checkbox labeled "Unblock".  Be sure to check this box and hit OK.
+
 **Known bugs:** For unknown reasons, the browser stops making external calls. You can fix this by refreshing the pota spot page, it'll work again.\
 **Note:** If you get an error that the port is in use, you may have to change the port number to something else.  For this example, the port number is 8075.  Your installation could use something different.
+
+***Configure PowerShell***
+Run the following command in a PowerShell window: ```Get-ExecutionPolicy -List```
+The output should have RemoteSigned in the CurrentUser line as such:
+```
+   Scope ExecutionPolicy
+        ----- ---------------
+MachinePolicy       Undefined
+   UserPolicy       Undefined
+      Process       Undefined
+  CurrentUser    RemoteSigned
+ LocalMachine       AllSigned
+ ```
+If you get an error saying httpServer.ps1 cannot be loaded because running scripts is disabled on this system.
+To fix this, run the following in a PowerShell window
+
+```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```
 
 **Usage:**
 To run the proxy that handles communication between your browser and your logging software, you can either:
