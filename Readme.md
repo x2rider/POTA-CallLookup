@@ -1,6 +1,6 @@
 # POTA-Call Lookup plugin
 ## Paul - KA5PMV
-When run with the Parks On The Air (POTA) browser extension (https://dwestbrook.net/projects/potaplus/), these scripts will enable looking up callsigns from various loggers when clicking the QSY button.\
+When run with the Parks On The Air (POTA) browser extension (https://dwestbrook.net/projects/potaplus/), these scripts will enable looking up callsigns from various loggers when clicking the QSY button.
 
 **System Prep**
 After unzipping the files, right click on each .ps1 file, go to properties, then in the General tab, look at the bottom and see if there is a checkbox labeled "Unblock".  Be sure to check this box and hit OK.
@@ -49,7 +49,7 @@ First, place the following function at the end of the foreground.js file of the 
 	}
 ```
 
-This is a bit hard to explain where it goes, but the one line of code below needs to be added to the QSY function so it's called whenever the QSY button is clicked.\
+This is a bit hard to explain where it goes, but the one line of code below needs to be added to the QSY function so it's called whenever the QSY button is clicked.
 Place the following line at the end of the QSY function.
 ``` setCall(scan_call, OPTIONS.loggingConfig.method); ```
 
